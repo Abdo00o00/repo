@@ -1,0 +1,59 @@
+<section class="section_padding blog_bosts-sec">
+    <div class="container">
+        <div class="row">
+            <div class=" col-12 col-xl-11 mx-auto">
+
+                <div class="col-12 d-flex flex-column">
+                    <div class="sec_header col-12 d-flex flex-column text-center">
+                        <p class="h2 text-uppercase">Latest Blog Post</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been tahe industry.</p>
+                        <div class="about_company_line d-flex align-items-center d-block mx-auto my-4">
+                            <span class="right_line"></span>
+                            <span class="left_line"></span>
+                        </div>
+                    </div>
+
+                    <div class="card_home col-12 d-flex flex-column flex-lg-wrap  flex-xl-row">
+                        <div *ngFor="let item of cards" 
+                        class="card col-12 col-lg-6 col-xl-4 mx-auto d-flex justify-content-center bg-transparent border-0  overflow-hidden">
+                            <p-card class="p-3">
+                                <ng-template pTemplate="header">
+                                    <div class="position-relative img_card_home overflow-hidden">
+                                        <img alt="Card" src="./../../../../assets/images/{{ item.img_src }}" />
+
+                                        <div class="card_date position-absolute start-0 d-flex align-items-center ">
+                                            <i class="fa-regular fa-calendar-days py-2 px-3"></i>
+                                            <span class="text-nowrap spann py-2">
+                                                <span class=" px-1">{{item.date.ddmm}}</span>
+                                                {{item.date.yyyy}}
+                                              </span>
+                                        </div>                                                              
+                                        <div class="line_card position-absolute bottom-0 start-0 end-0 w-100"></div>
+                                    </div>
+                                    <div class="caerd_body">
+                                        <h3>
+                                            <a href="#" class="text-decoration-none">Title of first blog post</a></h3>
+                                        <div class="d-flex align-items-center flex-row mb-3 mt-2 card_sub_header">
+                                            <i class="fa-solid fa-user-large pe-1"></i>
+                                            <span class="px-1">By</span>
+                                            <a href="#" class="text-decoration-none text-dark">{{item.by_who}}</a>
+
+                                            <span class="px-2">/</span>
+                                            
+                                            <i class="fa-solid fa-comments px-1"></i>
+                                            <span class="px-1">{{item.num_of_comments}}</span>
+                                            <a href="#" class="text-decoration-none text-dark">Comments</a>
+                                        </div>
+                                        <p>{{item.desc}}</p>
+                                    </div>
+
+                                </ng-template>
+                            </p-card>
+                        </div>
+
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>

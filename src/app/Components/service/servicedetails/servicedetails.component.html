@@ -1,0 +1,113 @@
+<app-oppeningsec  [h1_background]="h1_background" ></app-oppeningsec>
+<app-sitemap [towhat]="towhat"></app-sitemap>
+<section class="section_padding my-5 main_content_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column flex-lg-row">
+
+                <div class="col-12 col-lg-3 d-flex flex-column">
+
+                    <div class="col-12">
+                        <ul class="list-unstyled d-flex flex-column mb-5 projects_titles_ul">
+                            <li *ngFor="let item of service_titles" class="rounded-4 {{item.class}}" (click)="changeActiveClass(item.id)" #item>
+                                <span >{{item.title}}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button" (click)="downloadBrochure()" class="border-0 rounded-4 text-uppercase text-nowrap Roboto mb-4"><i class="fa-regular fa-file-lines me-2 fs-5"></i>Company Brochure</button>
+                
+                    <div class="col-12 contact_Info mt-4">
+                        <div class="head mb-5">
+                            <h2>Contact Info</h2>
+                        </div>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li *ngFor="let item of contact_info"
+                                class="bg-transparent border-0 ps-0 d-flex flex-row align-items-center"
+                                ><i class="fa-solid {{item.icon_class}} me-3 ms-2 "></i>{{item.text}}</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-9 more_text ps-lg-5">
+                    <div class="col-12 d-flex flex-column">
+
+                        <div class="col-12">
+                            <figure class="col-12">
+                                <img class="img-fluid" src="./../../../../assets/images/service-detail-1.jpg" alt="...">
+                            </figure>
+                        </div>
+
+                        <div>
+                            <h2 class="h1 head mb-5 mt-3">General Contracting</h2>
+                        </div>
+
+                        <article>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="with_border">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </article>
+
+                        <div class="col-12 d-flex flex-column flex-lg-row two_parts">
+
+                            <div class="col-12 col-lg-6 pe-lg-3 left">                                
+                                <div>
+                                    <h2 class="h1 head mb-5 mt-3">What We Do</h2>
+                                </div>
+                                <article>
+                                    <p class="mb-4 disabled">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <ul class="list-unstyled d-flex flex-column left">
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-check fs-4 me-3 "></i>
+                                            <span>100% Secure, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-check fs-4 me-3 "></i>
+                                            <span>Easy to claim, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet..</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-check fs-4 me-3 "></i>
+                                            <span>More benefit nonummy nibh euismod. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+                            <div class="col-12 col-lg-6 ps-lg-3 right">
+                                <div>
+                                    <h2 class="h1 head mb-5 mt-3">Business Plan Market</h2>
+                                </div>
+                                <article>
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
+                                    <ul class="list-unstyled d-flex flex-column right">
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                            <span>Provide repair services to a diverse customer base across multiple sectors</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                            <span>Remain responsive to our customers’ needs</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                            <span>Work fewer hours — and make more money</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                            <span>Attract and retain quality, high-paying customers</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                            <span>Manage your time so you’ll get more done in less time</span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+
+                        </div>
+
+                        <app-qand-a></app-qand-a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

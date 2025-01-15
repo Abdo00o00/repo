@@ -1,0 +1,90 @@
+<section class="section_padding">
+    <div class="d-flex flex-column flex-lg-row col-12">
+
+        <div class="col-12 col-lg-4 col-xl-6 ">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-12 map_home px-0 ">
+                        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55257.47256622625!2d30.950974695304794!3d30.048559902823467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585a29f1b324d9%3A0xc5c5525706430b8d!2sEl%20Sheikh%20Zayed%20City%2C%20Giza%20Governorate!5e0!3m2!1sen!2seg!4v1736000348865!5m2!1sen!2seg"  allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-lg-8 col-xl-6">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 ps-3 ps-lg-5">
+        
+                        <div class="col-12 d-flex flex-column">
+        
+                            <div class="about_company_title mt-4 mb-0">
+                                <h3 class="text-uppercase h2 Roboto">Contact Detail</h3>
+                            </div>
+                            <div class="about_company_line d-flex align-items-center col-12 my-4">
+                                <span class="right_line"></span>
+                                <span class="left_line d-none"></span>
+                            </div>
+        
+                            <div class="about_company_items d-flex flex-wrap">
+        
+                                <div *ngFor="let item of data_contacts" class="about_company_item_loop mb-4 text-center col-5 col-xl-4  mx-auto">
+                                    <div class="for_border pt-3 rounded-4">
+                                        <div class="about_company_item_icon mx-auto text-white"><i [class]="item.icon_class"></i></div>
+                                        <p class="my-2 Roboto">{{item.property}}</p>
+                                        <p class="px-3">{{item.value}}</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                        <div class="col-12 d-flex flex-column flex-lg-row">
+                            <form action="" class="col-12">                            
+
+                                <div class="about_company_title mt-4 mb-0">
+                                    <h3 class="text-uppercase h2 Roboto">Contact Form  </h3>
+                                </div>
+                                <div class="about_company_line d-flex align-items-center col-12 my-4">
+                                    <span class="right_line"></span>
+                                    <span class="left_line d-none"></span>
+                                </div>
+            
+                                <div class="about_company_items ">
+                                    <div class="d-flex flex-wrap col-12">
+
+                                        <p-inputGroup  class="rounded-4 about_company_item me-auto">
+                                            <p-inputGroupAddon class=" py-1"><i class="fa-solid fa-user"></i></p-inputGroupAddon>
+                                             
+                                            <input #nameInput pInputText placeholder="Name" type="text"  name="eame"  class=" py-0"/>
+                                        </p-inputGroup>
+                                        <p-inputGroup  class=" about_company_item">
+                                            <p-inputGroupAddon class=" py-1"><i class="fa-solid fa-envelope"></i></p-inputGroupAddon>
+                                             
+                                            <input #emailInput pInputText placeholder="Email" type="email"  name="email"  class=" py-0"/>
+                                        </p-inputGroup>
+
+                                        <p-inputGroup  class=" text_area">
+                                            <p-inputGroupAddon class=" py-1"><i class="fa-solid fa-pencil"></i></p-inputGroupAddon>
+                                            <textarea #messageInput pInputTextarea  placeholder="Message" type="text" rows="1" name="Message" title="Message" class=" w-100 py-1"></textarea>
+                                        </p-inputGroup>
+
+                                    </div>
+            
+                                </div>
+                                <div class="d-flex flex-row gap-2 my-5 justify-content-end">
+                                    <app-nice-button [buttonn]="buttonn_Submit"></app-nice-button>
+                                    <app-nice-button [buttonn]="buttonn_clear" (click)="clearValues(nameInput , emailInput , messageInput)"></app-nice-button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<app-sub-header></app-sub-header>

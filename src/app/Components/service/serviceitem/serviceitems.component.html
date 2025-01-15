@@ -1,0 +1,17 @@
+<section class="section_padding mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-wrap service_items mt-lg-5">
+                <div *ngFor="let item of Service_items" class="service_item mx-auto d-flex flex-column text-center align-items-center" >
+                    <div class="icon_home"><i class="fa-solid {{item.icon_class}}"></i></div>
+                    <h2 class="h3 w-100 Montserrat">{{item.h2_text}}</h2>
+                    <div class="break_line"></div>
+                    <p class="px-4 Montserrat">{{item.p_text}}</p>
+                    <p ><span [routerLink]="['/servicedetails']"  title="read more"class="text_colored Montserrat">{{item.a_text}}</span></p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

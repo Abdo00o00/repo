@@ -1,0 +1,107 @@
+section{
+    background: url(../../../../assets/images/asset56.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+    }
+    .sec_header{
+        z-index: 1;
+        .about_company_line{
+        
+            position: relative;
+            background-color: transparent;
+            width: 10px;
+            height: 10px;
+            border: 4px solid white;
+            .right_line ,.left_line{
+                width: 70px;
+                height: 4px;
+                position: absolute;
+                background-color: var(--primary);
+                left: 20px;
+                bottom: 0;
+                align-self: center;
+            }
+            .left_line{
+                left: -90px;
+                bottom: 0px;
+            }
+        }
+        span.loremm{
+            color:  #767676 !important;
+        }    
+    }
+    .carousell{
+        background-color: transparent;  
+        z-index: 1;
+        .div_img_text{
+            background-color: #273447;
+            color: white;
+            padding: 40px 30px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            .comment_text{
+                padding-left: 24px;
+            }
+            .img_home{
+                background-color: var(--primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:  91px;
+                height: 91px;
+                img{
+                    width: 84px;
+                    height: 84px;
+
+                    z-index: 1;
+                }
+                .yellow_line{
+                    background-color: var(--primary);
+                    height: 3px;
+                    width: 140px;
+                    margin: 10px 0;
+                    transform: rotate(70deg);
+                    z-index: 0;
+                }
+            }
+            }
+
+        span.icno_home {
+            background-color: #273447;
+            color: var(--primary);
+            height: 55px;
+            width: 55px;
+            display: flex;          
+            align-items: center;
+            justify-content: center;
+            border-bottom-left-radius: 18px;
+            i {
+                font-size: 30px;
+                transform: scale(1.5);
+                text-align: center;
+            }
+        }
+        .bg-yellwo{
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-bottom-right-radius: 18px;
+            span{
+                z-index: 1;
+            }
+        }
+    }
+}

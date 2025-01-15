@@ -1,0 +1,102 @@
+// div.footer-top{
+
+
+// }
+section.banner{
+    .footer-top {
+        margin: auto;
+        width: 80%;
+        background-color: rgba(5, 26, 56, 0.966);
+        color: white;
+        padding: 30px 0;
+        position: relative;
+        margin-top: -120px;
+        margin-bottom: 40px;
+        z-index: 2 !important;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        &::after{
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+          background-image: url(../../../../assets/images/bg-pattern.png);
+          background-size: 200px;
+          background-position: right;
+          background-repeat: repeat;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1 !important;
+        }
+        .banner_item{
+
+          .icon {
+            font-size: 50px;
+            // width: 50px;
+            // opacity: ;
+            color:var(--primary)!important;
+          }
+          h5 {
+            font-weight: bold;
+            margin-top: 10px;
+          }
+          p {
+            margin: 0;
+            font-size: 14px;
+          }
+        }
+
+      }
+}
+
+//
+//responsive
+@media screen and (max-width: 990px) {    
+  .footer-top {
+  width: 100% !important;
+  padding: 25px 0;
+  margin-top: 0px !important;
+  .banner_item{
+
+    .icon {
+      font-size: 40px;
+      // width: 40px;
+    }
+    h5 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    p {
+      font-size: 12px !important;
+    }
+  }
+  }
+}
+@media screen and (max-width: 767px) {    
+  .footer-top {
+    padding: 20px 0 20px 20px !important;
+    .banner_item{
+
+      .icon {
+        font-size: 35px !important;
+        // width: 35px;
+        // opacity: ;
+      }
+      h5 {
+        // font-size: 20px;
+        margin-top: 10px;
+      }
+      p {
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 575px) {
+//   .footer-top {
+//   margin-top: 0px !important;
+//   }
+// }

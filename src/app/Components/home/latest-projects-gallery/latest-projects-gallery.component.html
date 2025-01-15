@@ -1,0 +1,34 @@
+<section class="section_head mb-0">
+    <div class="container-fluid  mx-0">
+        <div class="row  ">
+            <div class="col-12 px-0  d-flex flex-column">
+                <div class="sec_head mb_70  px-4 p_t80 d-flex flex-column flex-lg-row col-12 ">
+                    <div class="section_title col-12 col-lg-6 d-flex align-items-center">
+                        <h2 class="text-uppercase mb-3  mb-lg-0 ">Latest Projects</h2>
+                    </div>
+                    <ul class="section_tabs mb-0 col-12 col-lg-6 d-flex flex-wrap list-unstyled align-items-center">
+                        <li *ngFor="let item of gallery_sub_titles" [class]="item.class" (click)="changeImages(item.id, item.text)" >
+                            <strong href="#" class="text-decoration-none" [id]="item.id" ><span class="">{{item.text}}</span></strong>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+                <div class="sec_content col-12 mx-0 d-flex flex-wrap">
+                    <div  *ngFor="let item of gallery_items" class="img_home col-12 col-md-6  col-xl-3 p-0 m-0 position-relative overflow-hidden">
+                        <img [src]="item.imageSrc" alt="{{item.altt}}" class="w-100"/>
+                        <div class="img_before"></div>
+                        <div class="img_overlay position-absolute">
+                            <a href="#" title=".."><i class="bi bi-link-45deg"></i></a>
+                            <!-- <a href="#" title=".."><i class="bi bi-image"></i></a> -->
+                        </div>
+                    </div>
+                    <div *ngIf="gallery_items.length === 0" class="no-results text-center w-100">
+                        <p class="text-danger">No projects found in this category.</p>
+                      </div>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

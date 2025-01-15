@@ -1,0 +1,170 @@
+section.main_content_sec{
+    
+    h2{
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 900;
+        color:rgb(0, 0, 0);
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    ul.projects_titles_ul{
+        li{
+            background-color: #e5ecf1;
+            border-left: 5px solid transparent;
+            transition: all .2s ease;
+            padding: 15px 20px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            &:hover, &.active{
+                // border-left: 5px solid #023853;         
+                background-color: var(--primary);       
+                span{
+                    color: white;
+                }
+            }
+            span{
+                color: #222222;         
+                font-weight: 700;
+                color:rgb(34, 34, 34) ;
+                font-size: 14px;
+                line-height: 24px;     
+                font-family: 'Montserrat', sans-serif !important;  
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+    
+    button{
+        background-color: #0C1F38;
+        color: white;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 23px;
+        padding: 15px 35px;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+    .contact_Info{
+        h2{
+            position: relative;
+            font-weight: 700;
+            color:rgb(12, 31, 56) ;
+            font-size: 24px;
+            line-height:41px;
+            &::after{
+                content: "";
+                display: block;
+                width: 45px;
+                height: 7px;
+                border-radius: 3px;
+                position: absolute;
+                background-color: var(--primary);
+                left: 0;
+                bottom: -15px;
+            }
+        }
+        ul{
+            li{
+                padding-bottom: 20px;
+                padding-top: 8px;
+                cursor: unset;
+                color: rgb(34, 34, 34) ;
+                font-size: 14px ;
+                line-height:24px ;
+                font-family: 'Montserrat', sans-serif !important;
+                i{
+                    color: rgb(4, 30, 66);
+                    // font-weight: 400;
+                    font-size: 16px ;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+    .more_text{
+        h2{
+            position: relative;
+            &::after{
+                content: "";
+                display: block;
+                width: 45px;
+                height: 7px;
+                border-radius: 3px;
+                position: absolute;
+                background-color: var(--primary);
+                left: 0;
+                bottom: -15px;
+            }
+        }
+        article{
+            p{
+                color: rgb(34, 34, 34) ;
+                font-size: 14px;
+                line-height:24px;
+                font-family: 'Montserrat', sans-serif !important;
+            }
+            p.with_border{
+                font-family: 'Montserrat', sans-serif !important;
+                border-left: 6px solid var(--primary);
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: #F6F6F6;
+                font-style: italic;
+                color: rgb(104, 104, 104) ;
+                font-size: 16px;
+                line-height:26px;
+            }
+        }
+        .two_parts{
+            div.left{
+                p.disabled{
+                    font-weight: 700;
+                    color: rgb(153, 153, 153);
+                    font-size: 14px;
+                    line-height:22px;
+                    font-family: 'Montserrat', sans-serif !important;
+                }
+                ul.left{
+                    li{
+                        font-family: 'Montserrat', sans-serif !important;
+                        padding: 15px;
+                        font-weight: 400;
+                        color: rgb(34, 34, 34);
+                        font-size: 14px;
+                        line-height: 24px;
+                        i{
+                            color: var(--primary);
+                        }
+                    }
+                }
+
+            }
+            div.right{
+                p{
+                    font-weight: 400;
+                    color: rgb(34, 34, 34);
+                    font-size: 14px;
+                    line-height:24px;
+                }
+                ul.right{    
+                    li{
+                        padding: 10px;
+                        align-items: center;
+                        span{
+                            font-family: 'Montserrat', sans-serif !important;
+                            font-weight: 400;
+                            color: rgb(34, 34, 34);
+                            font-size: 14px;
+                            line-height:18px;
+                        }
+                        i{
+                            color: var(--primary);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

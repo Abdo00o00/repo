@@ -1,0 +1,56 @@
+<!-- Carousel -->
+<section class="section_padding pb-0 main_carousel">
+    <div class="container-fluid px-0">
+        <div class="row mx-0 ">
+            <div class="px-0">
+                <p-carousel 
+                    [value]="products" 
+                    [numVisible]="1" 
+                    [numScroll]="1" 
+                    [circular]="false" 
+                    [responsiveOptions]="responsiveOptions" 
+                    autoplayInterval="3000">
+                        <ng-template let-product pTemplate="item">
+                                <div class="border-0 w-100">
+                                    <div class="">
+                                        <div class="position-relative  img_home relative mx-auto w-100">
+                                            <img 
+                                                *ngIf="product.imageSrc"
+                                                title="."
+                                                src="./../../../assets/images/{{ product.imageSrc }}" 
+                                                [alt]="product.name" 
+                                                class="w-100 h-100 border-0 " />
+                                        
+                                                <div class=" layer_carusel_text text-white position-absolute d-flex flex-column top-0 bottom-0 d-flex align-items-center justify-content-center z-3">
+                                                    <h2 class="text-start me-auto text-uppercase"><span>We Build</span> Your Dream</h2>
+                                                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                                        Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer.</span>
+                                                    <app-nice-button  ngClass="mt-3" [buttonn]="buttonn_service" class="me-auto ms-3 ms-lg-5"></app-nice-button>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </ng-template>
+                </p-carousel>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- section banner -->
+<app-banner></app-banner>
+<!-- section about company -->
+<app-about-company></app-about-company>
+<!-- section latest projects gallery -->
+<app-latest-projects-gallery></app-latest-projects-gallery>
+<!-- section why choose us -->
+<!-- <app-w-ch-us></app-w-ch-us> -->
+
+
+
+<!-- section last blog post -->
+<app-l-blog-post></app-l-blog-post>
+<!-- section clients comments -->
+<app-w-o-c-say-carousel></app-w-o-c-say-carousel>
+<!-- section our clients -->
+<app-o-c-carousel></app-o-c-carousel>

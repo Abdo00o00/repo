@@ -1,0 +1,145 @@
+<section class="section_padding our_company_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                
+                <div class="col-12 d-flex flex-column flex-lg-row pb-5">
+                    <div class="col-12 col-lg-6">
+                        <figure class="col-12">
+                            <img class="img-fluid" src="./../../../../assets/images/about-img-3.jpg" alt="..">
+                        </figure>
+                    </div>
+    
+                    <div class="col-12 col-lg-6 ps-lg-3 right">
+                        <div>
+                            <h2 class="h1 head mb-3 mt-3">We Are Walls Contruction</h2>
+                        </div>
+    
+                        <article>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <ul class="list-unstyled d-flex flex-column right">
+                                <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                    <span>Provide repair services to a diverse customer base across multiple sectors</span>
+                                </li>
+                                <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                    <span>Remain responsive to our customers’ needs</span>
+                                </li>
+                                <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                    <span>Work fewer hours — and make more money</span>
+                                </li>
+                                <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                    <span>Attract and retain quality, high-paying customers</span>
+                                </li>
+                                <li class="d-flex flex-row"><i class="fa-solid fa-angle-right fs-6 me-3"></i>
+                                    <span>Manage your time so you’ll get more done in less time</span>
+                                </li>
+                            </ul>
+                        </article>
+    
+                        <a href="/services" class="ms-2 border-0 rounded-4  text-nowrap px-4 py-3 text-decoration-none btn" >Our service</a>
+                        
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex flex-column flex-lg-row ">
+
+                    <div class=" col-12 col-lg-6 d-lg-none d-block">
+                        <p-carousel 
+                            [value]="products" 
+                            [numVisible]="1" 
+                            [numScroll]="1" 
+                            [circular]="true" 
+                            [responsiveOptions]="responsiveOptions"
+                            autoplayInterval="2500">
+                            <ng-template let-product pTemplate="item">
+                                <div class="border-1 surface-border border-round m-2 p-3">
+                                    <div class="mb-3">
+                                        <div class="relative mx-auto">
+                                            <img 
+                                                src="./../../../../assets/images/{{ product.image }}" 
+                                                alt="{{product.name}}" 
+                                                class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                        <!-- <figure class="col-12">
+                            <img class="img-fluid" src="../../../../assets/images/service-detail-1.jpg" alt="...">
+                        </figure> -->
+                    </div>
+
+                    <div class="col-12 col-lg-6 ps-lg-5">
+
+                        <div>
+                            <h2 class="h1 head mb-5 mt-3">We are providing good services to our valuable customers Purchase.</h2>
+                        </div>
+        
+                        <article>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p class="mb-5 itilic">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                            <p class="with_border">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </article>
+                    </div>
+    
+                    <div class="col-12 col-lg-6 d-lg-block d-none">
+                        <p-carousel 
+                            [value]="products" 
+                            [numVisible]="1" 
+                            [numScroll]="1" 
+                            [circular]="true" 
+                            autoplayInterval="2500">
+                            <ng-template let-product pTemplate="item">
+                                <div class="border-1 surface-border border-round m-2 p-3">
+                                    <div class="mb-3">
+                                        <div class="relative mx-auto overflow-hidden">
+                                            <img 
+                                                src="./../../../../assets/images/{{ product.image }}" 
+                                                alt="{{product.name}}" 
+                                                class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                    </div>
+
+                </div>
+
+                <hr > 
+                
+                <div class="col-12 d-flex flex-column flex-lg-row my-5 our_items card border-0 flex">
+
+                    <div class="item col-12  d-flex flex-row p-3 mb-4">
+                        <div><i class="fa-regular fa-lightbulb"></i></div>
+                        <div class="ps-4">
+                            <h3 class="mb-4">Our Vision</h3>
+                            <p>the capacity to envisage future market trends and plan accordingly. We create sites using WordPress & Joomla.</p>
+                        </div>
+                    </div>
+                    <p-divider layout="vertical" class="d-none d-lg-block" />
+                    <div class="item col-12  d-flex flex-row p-3 mb-4">
+                        <div><i class="fa-regular fa-paper-plane"></i></div>
+                        <div class="ps-4">
+                            <h3 class="mb-4">Our Vision</h3>
+                            <p>As a group or committee of persons sent to conduct negotiations, establish relations, provide a technical</p>
+                        </div>
+                    </div>
+                    <p-divider layout="vertical" class="d-none d-lg-block" />
+                    <div class="item col-12  d-flex flex-row p-3 mb-4">
+                        <div><i class="fa-regular fa-heart"></i></div>
+                        <div class="ps-4">
+                            <h3 class="mb-4">Our Vision</h3>
+                            <p>We create sites using WordPress and Joomla as the content management system. Packaging Metus varius</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr > 
+
+            </div>
+
+
+        </div>
+    </div>
+</section>

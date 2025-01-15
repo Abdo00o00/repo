@@ -1,0 +1,36 @@
+<section class="timeline section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="the_head_sec">
+                    <h2 class="text-center h1 mb-5">TIMELINE HISTORY</h2>
+                </div>
+                <div class="">
+                    <div class="    ">
+                        <p-timeline [value]="events"  >
+                            <ng-template pTemplate="content" let-event>
+                                <p-card>
+                                    <figure class="col-12 col-lg-4 p-0 ps-lg-0 pe-lg-5 text-center mb-0 d-flex align-items-center justify-content-center {{event.class}}">
+                                        <img 
+                                        *ngIf="event.image" 
+                                        src="./../../../../assets/images/{{event.image}}"
+                                        alt="{{event.name}}"
+                                        class="img-fluid align-self-center"/>
+                                    </figure>
+                                    <div class="col-12 col-lg-8 px-2 px-lg-2 side_text">
+                                        <h2 class="h1">{{event.date}}</h2>
+                                        <p class="h2">{{event.status}}</p>
+                                        <p>This was the time when we started our company. We had no idea how far we would go, we werenâ€™t even sure that we would be able to survive for a few years. What drove us to start the company was the understanding that we could provide a service no one else was providing.</p>
+
+                                    </div>
+                                        
+                                </p-card>
+                            </ng-template>
+                        </p-timeline>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

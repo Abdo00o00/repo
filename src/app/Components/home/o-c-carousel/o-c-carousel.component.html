@@ -1,0 +1,45 @@
+<section class="section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column">
+                <div class="sec_header col-12 d-flex flex-column text-center">
+                    <p class="h2 text-uppercase">Our Client</p>
+                    <div class="about_company_line d-flex align-items-center d-block mx-auto my-4">
+                        <span class="right_line"></span>
+                        <span class="left_line"></span>
+                    </div>
+                    <span class="loremm col-12 col-lg-8 mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </div>
+                <div class="card carousell border-0 col-12 mx-auto overflow-hidden bottom_carousel">
+                    <p-carousel 
+                    
+                        [value]="products" 
+                        [numVisible]="5" 
+                        [numScroll]="5" 
+                        [circular]="false" 
+                        [responsiveOptions]="responsiveOptions">
+                            <ng-template let-product pTemplate="item" >
+                                <div class=" m-2 py-3 " >
+                                    <div class="mb-3">
+                                        <div class="relative mx-auto ">
+                                            <a href="#"  title="{{product.name}}">
+                                                <img 
+                                                    src="./../../../../assets/images/{{ product.imageSrc }}" 
+                                                    alt="{{product.name}}"
+                                                    class="w-full" />
+                                            </a>
+                                                <!-- <div class="over_layer_on_img position-absolute top-0 bottom-0 start-0 end-0"></div> -->
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </ng-template>
+                    </p-carousel>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

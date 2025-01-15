@@ -1,0 +1,25 @@
+section{
+    .OpenSans{
+        font-weight: 700;
+        color: rgb(103, 103, 103);
+        font-size: 14px;
+        line-height: 21px;
+        i{
+            // font-weight: 700;
+            color: rgb(103, 103, 103) !important;
+            font-size: 12px;
+            line-height: 20px;
+
+        }
+        .text_colored{
+            color: var(--primary);
+            i{
+                // font-weight: 700;
+                color: rgb(103, 103, 103) !important;
+                font-size: 12px;
+                line-height: 20px;
+    
+            }
+        }
+    }
+}

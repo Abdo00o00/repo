@@ -1,0 +1,13 @@
+<section class="py-4 sitemap">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class=" d-flex ps-5 ps-lg-2 align-items-center OpenSans">
+                    <a href="#" routerLink="/home"><span class="text_colored">Home</span></a>
+                    <span *ngFor="let item of towhat" [class]="item.class" [routerLink]="item.route" [style]="item.style">
+                        <i class="fa-solid fa-angles-right px-2 "></i>{{item.label}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

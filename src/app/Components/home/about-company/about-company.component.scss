@@ -1,0 +1,41 @@
+
+.about_company_line{
+
+    position: relative;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    border: 4px solid var(--main);
+    .right_line ,.left_line{
+        // display: block;
+        width: 70px;
+        height: 4px;
+        position: absolute;
+        background-color: var(--primary);
+        left: 20px;
+        bottom: 0;
+        align-self: center;
+    }
+    .left_line{
+        left: -90px;
+        bottom: 0px;
+    }
+}
+.about_company_item_icon {
+    a{
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        
+        i{
+            color: var(--primary);
+            transition: all .3s ease-in-out;
+            font-size: 40px;
+            margin: 4px 20px 20px 20px;
+            &:hover {
+                color: var(--main);
+            }
+        }
+    }
+}

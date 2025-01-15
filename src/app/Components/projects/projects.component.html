@@ -1,0 +1,115 @@
+<app-oppeningsec  [h1_background]="h1_background"></app-oppeningsec>
+<app-sitemap [towhat]="towhat"></app-sitemap>
+<section class="section_padding my-5 main_content_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column flex-lg-row">
+
+                <div class="col-12 col-lg-3 d-flex flex-column">
+
+                    <div class="col-12  projects_details">
+                        <div class="head mb-5">
+                            <h2>Contact Info</h2>
+                        </div>
+
+                        <ul class="list-unstyled d-flex flex-column mb-5">
+                            <li  class="mb-2">
+                                <p class="item_property mb-1">Client: </p>
+                                <p class="item_valuea">{{main_project_display.project_client_info.Client}}</p>
+                            </li>
+                            <li  class="mb-2">
+                                <p class="item_property mb-1">Location: </p>
+                                <p class="item_valuea">{{main_project_display.project_client_info.Location}}</p>
+                            </li>
+                            <li  class="mb-2">
+                                <p class="item_property mb-1">Completed: </p>
+                                <p class="item_valuea">{{main_project_display.project_client_info.Completed}}</p>
+                            </li>
+                            <li  class="mb-2">
+                                <p class="item_property mb-1">Website: </p>
+                                <p class="item_valuea last_child">{{main_project_display.project_client_info.Website}}</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12">
+                        <ul class="list-unstyled d-flex flex-row mb-5 projects_titles_ul">
+                            <li *ngFor="let item of service_titles" class="{{item.class}}" (click)="changeActiveClass(item.id)" #item>
+                                <span class="text-start">{{item.title}}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button" (click)="downloadBrochure()" class="border-0 rounded-4 text-uppercase text-nowrap Roboto mb-4"><i class="fa-regular fa-file-lines me-2 fs-5"></i>Company Brochure</button>
+                
+                    <div class="col-12 contact_Info mt-4">
+                        <div class="head mb-5">
+                            <h2>Contact Info</h2>
+                        </div>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="bg-transparent border-0 ps-0 d-flex flex-row align-items-center">
+                                    <i class="fa-solid  me-3 ms-2 fa-location-dot"></i>99 S.t Jomblo Park Pekanbaru 28292. Indonesia</li>
+                                <li class="bg-transparent border-0 ps-0 d-flex flex-row align-items-center">
+                                    <i class="fa-solid  me-3 ms-2 fa-phone"></i>(0761) 654-123987</li>
+                                <li class="bg-transparent border-0 ps-0 d-flex flex-row align-items-center">
+                                    <i class="fa-solid  me-3 ms-2 fa-envelope"></i>info&#64;yoursite.com</li>
+                                <li class="bg-transparent border-0 ps-0 d-flex flex-row align-items-center">
+                                    <i class="fa-solid  me-3 ms-2 fa-clock"></i>Mon - Sat 09:00 - 17:00</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-9 more_text ps-lg-5">
+                    <div class="col-12 d-flex flex-column">
+
+                        <div class="col-12">
+                            <figure class="col-12">
+                                <img class="img-fluid" src="./../../../../assets/images/{{main_project_display.project_img_src}}" alt="...">
+                            </figure>
+                        </div>
+
+                        <div>
+                            <h2 class="h1 head mb-5 mt-3">{{main_project_display.project_title}}</h2>
+                        </div>
+
+                        <article>
+                            <p class="{{main_project_display.project_desc[0].class}}">{{main_project_display.project_desc[0].text}}</p>
+                            <p class="{{main_project_display.project_desc[1].class}}">{{main_project_display.project_desc[1].text}}</p>
+                            <p class="{{main_project_display.project_desc[2].class}}">{{main_project_display.project_desc[2].text}}</p>
+                        </article>
+
+                        <div class="col-12 d-flex flex-column flex-lg-row two_parts">
+
+                            <div class="col-12  left">                                
+                                <div>
+                                    <h2 class="h1 head mb-5 mt-3">What We Do</h2>
+                                </div>
+                                <article>
+                                    <p class="mb-4 disabled">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <ul class="list-unstyled d-flex flex-column left">
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-check fs-4 me-3 "></i>
+                                            <span>100% Secure, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-check fs-4 me-3 "></i>
+                                            <span>Easy to claim, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet..</span>
+                                        </li>
+                                        <li class="d-flex flex-row"><i class="fa-solid fa-check fs-4 me-3 "></i>
+                                            <span>More benefit nonummy nibh euismod. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<app-sub-header></app-sub-header>

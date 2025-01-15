@@ -1,0 +1,93 @@
+button{
+    background-color: var(--primary) ;
+    color: white;
+    margin: 0px 15px 0px 0px;
+    padding: 10px 6px 10px 25px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    transition: all 0.1s ease;
+    &:hover, &.active , &.active::before, &.active::after , &:focus, &:active{
+        background-color: #025077 ;
+        color: white;
+    }
+    span {
+        background-color: var(--main);
+        padding: 10px 14px;
+        margin-left: 1.5rem;
+        position: relative;
+        z-index: 1;
+        // clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        // transition: all 0s cubic-bezier(0, 0.01, 0, 1);
+        display: inline-block;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        i{
+            animation: button_animation 2s ease infinite;
+        }
+
+        // &::after{
+        //     content: "";
+        //     position: absolute;
+        //     top: 0; /* أسفل العنصر */
+        //     left: -21px;
+        //     right: 0;
+        //     height: 0;
+        //     // transform: rotateX(180deg);
+        //         // border-left: 20px solid transparent; /* الجانب المائل الأيسر */
+        //         // border-right: 20px solid transparent; /* الجانب المائل الأيمن */
+        //         // border-top: 46px solid var(--main); /* الجزء العلوي */
+        //     border-top-right-radius: 19px;
+        //     z-index: -1;
+        // }
+    }
+    
+}
+
+
+
+//responsive
+@media screen and (max-width: 990px) {
+    button{
+        padding: 9px 9px 9px 19px;
+        font-size: 12px;
+        line-height: 19px;
+        // span{
+            // &::after{
+                // left: -20px;
+                // border-top: 44px solid var(--main);
+            // }
+        // } 
+    }
+
+}
+@media screen and (max-width: 768px) {
+    button{
+        padding: 5px 5px 5px 15px;
+        font-size: 12px;
+        line-height: 19px;
+    }
+}
+
+//
+//animation
+
+@keyframes button_animation {
+    0%{
+        transform: translateX(-3px) scale(1);
+    }
+    // 10%{transform: translateX(1px);}
+    // 20%{transform: translateX(2px);}
+    // 30%{transform: translateX(3px);}
+    // 40%{transform: translateX(4px);}
+    50%{transform: translateX(3px) scale(1.15);}
+    // 60%{transform: translateX(4px);}
+    // 70%{transform: translateX(3px);}
+    // 80%{transform: translateX(2px);}
+    // 90%{transform: translateX(1px);}
+    100%{transform: translateX(-3px)scale(1);}
+    // 100%{transform: translateX(0px);}
+    
+}

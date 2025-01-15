@@ -1,0 +1,56 @@
+<section class="section_head mb-0 gallery_items_sec">
+    <div class="container">
+        <div class="row  ">
+            <div class="col-12 d-flex flex-column">
+                <div class="sec_head mb_70  px-4 p_t80 d-flex flex-column flex-lg-row col-12 ">
+
+                    <ul class="section_tabs mb-0 col-12 col-lg-6 d-flex flex-wrap list-unstyled align-items-center">
+                        <li *ngFor="let item of gallery_sub_titles" [class]="item.class" (click)="changeImages(item.id)" >
+                            <strong *ngIf="item.slach" class="slach">/</strong>
+                            <strong href="#" class="text-decoration-none" [id]="item.id" ><span class="">{{item.text}}</span></strong>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+
+                <div class="sec_content d-flex flex-wrap">
+                    
+                    <!-- gallery items -->
+                    <div  *ngFor="let item of gallery_items" class="img_home col-12 col-lg-6">
+                        <figure class="position-relative overflow-hidden m-2 m-md-3 m-lg-4">
+                            <img [src]="item.imageSrc" alt="{{item.altt}}" class="w-100 reall"/>
+                            <figcaption class="img_overlay position-absolute d-flex flex-column text-start p-4">
+                                <h2>{{item.title}}</h2>
+                                <div class="h2_after"></div>
+                                <p>{{item.text}}</p>
+                                <span (click)="getProjectId(item.id)" [routerLink]="['/projects', item.id]" class="text-uppercase">Read More</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- if there is no data -->
+                    <div *ngIf="gallery_items.length === 0" class="no-results text-center w-100">
+                        <p class="text-danger h1">No projects found in this category.</p>
+                    </div>
+                    
+                    <!-- pagenation -->
+                    <div class="pagess_wrapper mt-4 col-12">
+                        <ul class="list-unstyled d-flex align-items-center ">
+                            <li class="py-1 px-2">
+                                <a href="#" [routerLink]="['/gallery']" class="text-decoration-none text-white" title="next"><i class="fa-solid fa-angles-left fs-6"></i></a>
+                            </li>
+                            <li class="py-1 px-2 {{item.class}}" *ngFor="let item of pagess_wrapper" (click)="changeActiveClass_pages_wrapper(item.text)">
+                                <span  class="text-white">{{item.text}}</span>
+                            </li>
+                            <li class="py-1 px-2">
+                                <a href="#" [routerLink]="['/gallery']" class="text-decoration-none text-white" title="prev"><i class="fa-solid fa-angles-right fs-6"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

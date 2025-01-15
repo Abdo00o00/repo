@@ -1,0 +1,44 @@
+<section class="section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="about_company d-flex flex-column flex-lg-row col-12">
+
+                    <div class="about_company_img col-12 col-lg-5">
+                        <img class="img-fluid" src="./../../../assets/images/asset 7.png" alt="about company img">
+                    </div>
+
+                    <div class="about_company_text col-12 col-lg-7">
+                        <div class="about_company_title mt-4 mb-0">
+                            <h3 class="text-uppercase h1">about company</h3>
+                        </div>
+                        <div class="about_company_line d-flex align-items-center col-12 my-4">
+                            <span class="right_line"></span>
+                            <span class="left_line d-none"></span>
+                        </div>
+                        <div class="about_company_content">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown galley.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+                                a type specimen book. remaining essentially unchanged. It was popularised in the with the .</p>
+                        </div>
+                        <div class="about_company_items d-flex flex-row flex-wrap">
+                            <div class="about_company_item d-flex flex-row my-4 col-12 col-lg-6" *ngFor="let item of about_company_items">
+                                <div class="about_company_item_icon ">
+                                    <a href="#" title="..."><i [class]="item.icon"></i></a>
+                                                                    
+                                </div>
+                                <div class="about_company_item_text col-10">
+                                    <p class="text-uppercase h5">{{item.title}}</p>
+                                    <span>{{item.desc}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

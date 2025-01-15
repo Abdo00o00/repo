@@ -1,0 +1,60 @@
+<section class="section_padding clients_comments_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column">
+                <div class="sec_header col-12 d-flex flex-column text-center">
+                    <p class="h2 text-uppercase text-white">What Our Client Say</p>
+                    <div class="about_company_line d-flex align-items-center d-block mx-auto my-4">
+                        <span class="right_line"></span>
+                        <span class="left_line"></span>
+                    </div>
+                </div>
+                <div class="card carousell border-0 col-12 mx-auto overflow-hidden ">
+                    <p-carousel 
+                    
+                        [value]="products" 
+                        [numVisible]="2" 
+                        [numScroll]="2" 
+                        [circular]="false" 
+                        [responsiveOptions]="responsiveOptions">
+                            <ng-template let-product pTemplate="item" >
+                                <div class=" m-2 py-3 " >
+                                    <div class="mb-5 mx-4">
+                                        <div class="relative mx-auto d-flex flex-column">
+
+                                            <div class="col-12 d-flex flex-row div_img_text">
+                                                <div class="img_home ">
+                                                    <img 
+                                                        src="./../../../../assets/images/{{ product.imageSrc }}" 
+                                                        alt="{{product.name}}"
+                                                         />
+                                                    <div class="yellow_line position-absolute"></div>
+                                                </div>
+                                                <div class="col-8 comment_text">
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the standard dummy text ever since the when  .</p>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="col-12 d-flex flex-row">
+                                                <span class="p-3 icno_home"><i class="bi bi-quote"></i></span>
+                                                <div class="bg-yellwo pe-4">
+                                                    <strong class="text-white ps-3">David Matin</strong>
+                                                    <span class="ms-3">/</span>
+                                                    <span class="ms-3">David Matin</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </ng-template>
+                    </p-carousel>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
